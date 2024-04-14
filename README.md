@@ -8,6 +8,6 @@ Run `docker-compose up`
 
 # How it works
 - Uses docker-compose to start 3 services: backend (FastAPI), frontend (streamlit) and db (postgres)
-- The backend parses through the `/files` folder and iterates through each file, creates the embeddings and stores in postgres and the faiss index
+- The backend parses through the `/backend/files` folder and iterates through each file, creates the embeddings and stores in postgres and the faiss index
 - When you search, we create the embeddings from the search, perform a faiss search and then get the text from sql. This is then shown in the UI via streamlit
 - The main file is `main.py`
